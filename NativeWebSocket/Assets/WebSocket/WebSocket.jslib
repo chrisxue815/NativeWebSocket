@@ -194,6 +194,7 @@ var LibraryWebSocket = {
 	 * @param instanceId Instance ID
 	 */
 	WebSocketConnect: function(instanceId) {
+		if(typeof Runtime === "undefined") Runtime = { dynCall : dynCall };
 
 		var instance = webSocketState.instances[instanceId];
 		if (!instance) return -1;
